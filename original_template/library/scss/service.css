@@ -1,0 +1,174 @@
+body .service_fv {
+  width: 100%;
+  background-image: url(../images/fv3.png);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+  position: relative;
+  height: 848px;
+}
+body .service_fv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  opacity: 0.5;
+}
+body .service_fv .background {
+  position: absolute;
+  width: 512px;
+  height: 721px;
+  left: 0px;
+  top: 7px;
+  transform: translate(0px, 120px);
+  background: rgba(23, 23, 23, 0.7);
+}
+body .service_fv .catch {
+  width: 811px;
+  top: 60%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  position: relative;
+}
+body .service_fv .catch h1 {
+  font-family: "Arial";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 75px;
+  line-height: 86px;
+  letter-spacing: 0.4em;
+}
+body .service_fv .catch .message {
+  margin-top: 65px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+}
+body main .service-list {
+  width: 1227px;
+  margin: auto;
+}
+body main .service-list .service {
+  visibility: hidden;
+  transition: opacity 2s, visibility 2s;
+  display: flex;
+  padding-top: 235px;
+}
+body main .service-list .service:nth-child(2) {
+  flex-direction: row-reverse;
+}
+body main .service-list .service:last-child {
+  margin-top: 250px;
+  padding-top: 0;
+  padding-bottom: 174px;
+}
+body main .service-list .service:first-of-type .service-box .service-box2 h2 {
+  font-size: 27px;
+}
+body main .service-list .service {
+  opacity: 0;
+}
+body main .service-list .service.is-animation {
+  opacity: 1;
+  visibility: visible;
+}
+body main .service-list .service .service-box {
+  margin-top: 71px;
+  z-index: 2;
+  width: 398px;
+  height: 341px;
+  padding: 61px 137px 78px 55px;
+  background: rgba(23, 23, 23, 0.8);
+}
+body main .service-list .service .service-box .service-box2 {
+  border-left: 2px solid #FFFFFF;
+  height: 228px;
+}
+body main .service-list .service .service-box .service-box2 h2 {
+  font-size: 35px;
+  margin-left: 24px;
+  margin-top: 16px;
+  letter-spacing: 0.15em;
+}
+body main .service-list .service .service-box .service-box2 .service-text {
+  width: 372px;
+  margin-top: 34px;
+  line-height: 186%;
+  letter-spacing: 0.1em;
+  margin-left: 24px;
+}
+body main .service-list .service .service-ph {
+  height: 627px;
+  right: 300px;
+  position: relative;
+  transform: translate(100px);
+}
+body main .service-list .service .second {
+  right: -104px;
+}
+
+@media screen and (max-width: 768px) {
+  body main .service-list {
+    width: 590px;
+  }
+  body main .service-list .service {
+    display: block;
+    margin: auto;
+    padding-top: 0px;
+  }
+  body main .service-list .service .service-ph {
+    width: 590px;
+    height: auto;
+    text-align: center;
+    transform: translate(50%, 10%);
+  }
+  body main .service-list .service .second {
+    right: 295px;
+  }
+}
+@media screen and (max-width: 425px) {
+  body .service_fv .background {
+    width: 100%;
+  }
+  body .service_fv .catch {
+    width: 380px;
+    left: 50%;
+  }
+  body .service_fv .catch h1 {
+    letter-spacing: 0.3em;
+  }
+  body .service_fv .catch .title {
+    font-size: 60px;
+  }
+  body main .service-list {
+    width: 400px;
+  }
+  body main .service-list .service {
+    display: block;
+    margin: auto;
+  }
+  body main .service-list .service .service-box {
+    width: 380px;
+    height: 350px;
+    padding: 50px 10px 50px 10px;
+  }
+  body main .service-list .service .service-box .service-box2 {
+    width: 370px;
+    border-left: none;
+  }
+  body main .service-list .service .service-box .service-box2 .service-text {
+    width: 330px;
+  }
+  body main .service-list .service .service-ph {
+    width: 400px;
+    height: auto;
+    text-align: center;
+    transform: translate(75%, 10%);
+  }
+}
+/*# sourceMappingURL=service.css.map */

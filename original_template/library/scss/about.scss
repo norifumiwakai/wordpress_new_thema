@@ -1,0 +1,191 @@
+body{
+
+    .about_fv{
+        width: 100%;
+        background-image: url(../images/fv2.png);
+        background-repeat: no-repeat;
+        background-position: center 0;
+        background-size: cover;
+        position: relative;
+        height: 848px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;  bottom: 0;
+            left: 0;  right: 0;
+            background: black;
+            opacity:0.5;
+        }
+        .background{
+            position: absolute;
+            
+            width: 512px;
+            height: 721px;
+            left: 0px;
+            top: 7px;
+            transform: translate(0px,120px);
+            background: rgba(23, 23, 23, 0.7);
+        }
+        .catch{
+        width: 811px;
+        top: 60%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        position: relative;
+        h1{
+            font-family: 'Arial';
+            font-style: italic;
+            font-weight: 400;
+            font-size: 75px;
+            line-height: 86px;
+            letter-spacing: 0.4em;
+        }
+        .message{
+            margin-top: 65px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 29px;
+            letter-spacing: 0.1em;
+        }
+        }
+    }
+
+    main{
+        .main_profile{
+            width: 960px;
+            margin: auto;
+            .section{
+            visibility: hidden;
+            transition: opacity 2s, visibility 2s;
+            display: flex;
+            padding-top: 235px;
+            padding-bottom: 235px;
+            }
+            .section{
+                opacity: 0;
+                // transform: translateY(30%);
+                &.is-animation {
+                    opacity: 1;
+                    visibility: visible;
+                    @for $i from 1 to 1 {
+                    &:nth-child(#{$i}) {
+                        animation: fadeInText 1s ease 0.1 * $i + s forwards;
+                    }
+                    }
+                }
+                    .profile-box{
+                        height: 378px;
+                        margin-top: 75px;
+                        z-index: 2;
+                        width: 398px;
+                        padding: 61px 234px 65px 84px;
+                        background: rgba(23, 23, 23, 0.8);
+                        // position: absolute;
+                        .profile-box2{
+                            border-left: 2px solid #FFFFFF;
+                            height: 46px;
+                            margin-left: 22px;
+                        h2{
+                            font-size: 35px;
+                            margin-left: 24px;
+                            margin-top: 16px;
+                            letter-spacing: 0.4em;
+                        }
+                    }
+
+                        .profile{
+                        width: 372px;
+                        margin-top: 34px;
+                        line-height: 186%;
+                        letter-spacing: 0.1em;
+                        margin-left: 24px;
+                        p{
+                            font-size: 16px;
+                            margin-top: 13px;
+                            line-height: 25px;
+                        }
+                        }
+                }
+                .profile-ph{
+                    width: 423px;
+                    height: auto;
+                    right: 186px;
+                    position: relative;
+                    transform: translate(100px);
+                }
+            }
+        }
+    
+    }
+}
+
+@media screen and (max-width: 768px) {
+body{
+    .about_fv{
+        .background{
+            width: 100%;
+        }
+            .catch{
+                width: 600px;
+                left: 50%;
+            }
+        
+    }
+    main{
+        .main_profile{
+            width: 768px;
+            .section{
+                width: 768px;
+                display: block;
+                .profile-box{
+                    margin: auto;
+                }
+                .profile-ph{
+                    width: 550px;
+                    position: unset;
+                    margin-top: 100px;
+                }
+            }
+        }
+    }
+}
+}
+
+@media screen and (max-width: 425px) {
+    body{
+        .about_fv{
+            .background{
+                width: 100%;
+            }
+                .catch{
+                    width: 380px;
+                    left: 50%;
+                    .title{
+                        font-size: 60px;
+                    }
+                }
+                }
+            
+        
+        main{
+            .main_profile{
+                width: 425px;
+                .section{
+                    width: 425px;
+                    display: block;
+                    .profile-box{
+                        margin: auto;
+                        padding: 50px 10px 50px 10px;
+                    }
+                    .profile-ph{
+                        width: 400px;
+                        position: unset;
+                        margin-top: 100px;
+                        transform: translate(10px);
+                    }
+                }
+            }
+        }
+    }
+}
